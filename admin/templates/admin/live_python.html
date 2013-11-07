@@ -1,0 +1,19 @@
+{% extends 'admin/base.html' %}
+
+{% block header_title %}
+  {% trans %}Live Python Console{% endtrans %}
+{% endblock %}
+
+{% block content %}
+
+  {{ lib.render_form(form, uri_for('live_python'), btn='Run') }}
+  
+        {% if codes_content %}
+<BR><b>{{ codes_name }}</b>
+<BR><b>Executing code:</b> 
+<BR>{{ codes_content }} 
+<BR><BR><b>Console Output:</b> 
+<BR>{{ console_output }}<BR><BR>
+        {% endif %}
+
+{% endblock %}

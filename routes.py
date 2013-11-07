@@ -10,6 +10,7 @@ secure_scheme = 'https'
 
 _routes = [
     RedirectRoute('/secure/', handlers.SecureRequestHandler, name='secure', strict_slash=True),
+    RedirectRoute('/admintest/', handlers.AdminRequestHandler, name='admintest', strict_slash=True),
 ]
 
 def get_routes():

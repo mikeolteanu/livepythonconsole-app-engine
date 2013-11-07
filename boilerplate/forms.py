@@ -117,3 +117,8 @@ class EditEmailForm(BaseForm):
                                                 validators.Length(max=FIELD_MAXLENGTH, message=_(
                                                     "Field cannot be longer than %(max)d characters."))])
     pass
+
+class LivePythonConsoleForm(BaseForm):
+    code_name = fields.TextField(_('Code Name'), [validators.Required(), validators.Length(max=255)])
+    code_content = fields.TextAreaField(_('Code Content'), [validators.Required(), validators.Length(max=65536)])
+    pass
