@@ -131,13 +131,10 @@
             {% block header %}
             <header class="navbar" id="overview">
                 {% block header_title_lead %}
+				
                 <h1>{% block header_title %}{{ app_name }}{% endblock %}</h1>
                 <p class="lead">
-		            {% trans %}Congratulations on your Google App Engine Boilerplate powered page.{% endtrans %}
-		            <br><a href="http://github.com/coto/gae-boilerplate/blob/master/README.md" target="_blank">
-		            {% trans %}Learn why this Boilerplate Rocks{% endtrans %}</a> {% trans %}or just{% endtrans %} 
-		            <a href="http://github.com/coto/gae-boilerplate/" target="_blank">{% trans %}download the Source Code{% endtrans %}</a> 
-		            {% trans %}to help you to create your application.{% endtrans %}
+                <h3>Click here to add scripts: <a href="/admin/">Admin Python Console</a></h3>
 				</p>
                 {% endblock %}
                 {% block subnavbar %}

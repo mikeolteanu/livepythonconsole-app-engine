@@ -118,7 +118,22 @@ class EditEmailForm(BaseForm):
                                                     "Field cannot be longer than %(max)d characters."))])
     pass
 
-class LivePythonConsoleForm(BaseForm):
-    code_name = fields.TextField(_('Code Name'), [validators.Required(), validators.Length(max=255)])
-    code_content = fields.TextAreaField(_('Code Content'), [validators.Required(), validators.Length(max=65536)])
+class ScriptEditForm(BaseForm):
+    
+    codes_content = fields.TextAreaField(_('Code Content'), [validators.Required(), validators.Length(max=65536)])
+    script_url_ext = fields.TextField(_('Host at /pub/'))
+    show_source = fields.BooleanField(_('Show source code when run by public'))
+    html_output = fields.BooleanField(_('HTML console output'))
     pass
+
+
+class LivePythonConsoleForm(BaseForm):
+    
+    codes_name = fields.TextField(_('Code Name'), [validators.Required(), validators.Length(max=255)])
+    codes_content = fields.TextAreaField(_('Code Content'), [validators.Required(), validators.Length(max=65536)])
+    save_to_datastore = fields.BooleanField(_('Save to datastore'))
+    show_source = fields.BooleanField(_('Show source code when run by public'))
+    html_output = fields.BooleanField(_('HTML console output'))
+    script_url_ext = fields.TextField(_('Host at /pub/'))
+    pass
+

@@ -6,6 +6,11 @@
 
 {% block content %}
 
+        {% if save_to_datastore and codes_name != "" %}
+<b>PythonScript '{{ codes_name }}' saved to datastore</b> <BR>
+Hosted at <a href="{{ pub_url }}">{{ pub_url }}</a><BR>
+        {% endif %}
+
   {{ lib.render_form(form, uri_for('live_python'), btn='Run') }}
   
         {% if codes_content %}

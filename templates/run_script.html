@@ -1,0 +1,8 @@
+{% block content %}
+{% if script_source != "" %}
+<b> Source Code </b><BR><BR>
+{{ script_source }}
+<BR><BR><b> Console Output </b><BR>
+{% endif %}
+{{ console_output }}
+{% endblock %}

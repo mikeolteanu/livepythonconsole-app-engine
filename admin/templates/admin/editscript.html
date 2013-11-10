@@ -1,0 +1,12 @@
+{% extends 'admin/base.html' %}
+
+{% block header_title %}
+  {% trans %}Script Details{% endtrans %}
+{% endblock %}
+
+{% block content %}
+
+<BR><b>Script Name: {{ script.codes_name }}</b>
+
+  {{ lib.render_form(form, uri_for('script_manage'), btn='Update') }}
+{% endblock %}

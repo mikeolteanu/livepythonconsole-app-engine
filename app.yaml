@@ -1,4 +1,4 @@
-application: YOUR_APP_ID
+application: YOUR_APP_ID_REPLACES_THIS_TEXT
 version: dev
 runtime: python27
 api_version: 1

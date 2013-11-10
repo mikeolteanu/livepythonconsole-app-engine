@@ -1,3 +1,30 @@
+What is this?
+---------------------
+This is a Google App Engine application that lets your run your own python code in the cloud. When you follow the quick start instructions below, you are given your own personal website that hosts python scripts, which you can manage from a web console. You can bind these scripts to a public web address, so that the script runs whenever the URL is visited. You can also just run new scripts that you paste into the Python Live Console without redeploying your App Engine application.
+
+Python Live Console Quick Start
+Get started in just a few easy steps
+------------------------------------
+1. Sign into your Google account. You will need to have a Google Account.
+1. Go to the [App Engine site](https://appengine.google.com) and create an application. Set Authentication to "(Experimental) Open to all users with an OpenID Provider". Make a note of the application ID that you have chosen
+1. Download Python Live Console code from github([here](https://github.com/mikeolteanu/livepythonconsole-app-engine/archive/master.zip)). Extract the zip to a folder.
+1. Edit the first line of app.yaml file you just extracted, using the Application ID you chose in step 2.
+1. Download and install the latest version of the [App Engine SDK](http://code.google.com/appengine/downloads.html#Google_App_Engine_SDK_for_Python) for Linux, Mac OS or Windows (Tested with SDK version 1.8.5
+1. Run the App Engine SDK. Use "Add Existing Application" and point it to the folder you extracted.
+1. Deploy that application ([instructions](https://developers.google.com/appengine/docs/python/gettingstarted/uploading) - recommended setup: python 2.7, high replication datastore)
+1. Go to http://ApplicationID.appspot.com - This is the new site you have just created that is hosted on Google's servers!
+1. Login to the site with the same Google Account you created the app with.
+1. Go to the admin console at http://ApplicationID.appspot.com/admin/
+1. Add scripts and run them!
+
+Example scripts
+---------------------
+Get links to the [top 10 highest rated posts](http://admnonlytest.appspot.com/pub/reddittrending/) right now on reddit.com/all/
+[Send an email](http://admnonlytest.appspot.com/pub/emailurl) to yourself whenever someone visits this URL
+[Get bitcoin price](http://admnonlytest.appspot.com/pub/bitcoinprice/)
+
+Boilerplate information below:
+
 [Google App Engine Boilerplate](http://appengine.beecoss.com) [![Build Status](https://secure.travis-ci.org/coto/gae-boilerplate.png)](http://travis-ci.org/coto/gae-boilerplate)
 ==============================
 
