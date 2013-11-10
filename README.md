@@ -14,15 +14,15 @@ Python Live Console Quick Start
 Get started in just a few easy steps
 
 1. Sign into your Google account. 
-1. Go to the [App Engine site](https://appengine.google.com) and create an application. Set Authentication to "(Experimental) Open to all users with an OpenID Provider". Make a note of the application ID that you have chosen
+1. Go to the [App Engine site](https://appengine.google.com) and create an application. Set Authentication to "(Experimental) Open to all users with an OpenID Provider". Make a note of the application ID that you have chosen.
 1. Download Python Live Console code from github([here](https://github.com/mikeolteanu/livepythonconsole-app-engine/archive/master.zip)). Extract the zip to a folder.
 1. Edit the first line of app.yaml file you just extracted, using the Application ID you chose in step 2.
-1. Download and install the latest version of the [App Engine SDK](http://code.google.com/appengine/downloads.html#Google_App_Engine_SDK_for_Python) for Linux, Mac OS or Windows (Tested with SDK version 1.8.5
+1. Download and install the latest version of the [App Engine SDK](http://code.google.com/appengine/downloads.html#Google_App_Engine_SDK_for_Python) for Linux, Mac OS or Windows (Tested with SDK version 1.8.5)
 1. Run the App Engine SDK. Use "Add Existing Application" and point it to the folder you extracted.
 1. Deploy that application ([instructions](https://developers.google.com/appengine/docs/python/gettingstarted/uploading) - recommended setup: python 2.7, high replication datastore)
-1. Go to http://ApplicationID.appspot.com - This is the new site you have just created that is hosted on Google's servers!
+1. Go to http://ApplicationID.appspot.com - This is the new site you have just created that is hosted on Google's servers! (replace applicationID with your ID)
 1. Login to the site with the same Google Account you created the app with.
-1. Go to the admin console at http://ApplicationID.appspot.com/admin/
+1. Go to the admin console at http://ApplicationID.appspot.com/admin/ (replace applicationID with your ID)
 1. Add scripts and run them!
 
 Boilerplate information below. Google App Engine Boilerplate is the code I built the rest of the site on top of.
