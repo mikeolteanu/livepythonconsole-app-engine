@@ -98,7 +98,7 @@ class PythonScriptManagerHandler(BaseHandler):
         params = {
             "list_columns": [('codes_name', 'Script Name'),
 #                             ('codes_content', 'Script Content'),
-                             ('script_url_ext', 'Script URL  - http://' + str(app_identity.get_application_id()) + ".appspot.com/pub/")],
+                             ('script_url_ext', 'Script URL  - <b>http://' + str(app_identity.get_application_id()) + ".appspot.com/pub/</b>")],
             "scripts": scripts
             
         }

@@ -9,6 +9,7 @@
     <thead>
         <tr>
             <th class="span1">&nbsp;</th>
+            <th class="span1">&nbsp;</th>
             {% for attr, name in list_columns %}
             <th>
                 {{ name|safe }}
@@ -20,6 +21,9 @@
     <tr>
         <td>
             <a class="icon" href="{{ uri_for('script-edit', codes_name=script.codes_name) }}"><i class="icon-pencil"></i></a>
+        </td>
+        <td>
+            <a class="icon" href="{{ uri_for('run-script', url=script.script_url_ext) }}"><i class="icon-play"></i></a>
         </td>
         {% for attr, name in list_columns %}
         <td>

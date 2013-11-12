@@ -15,6 +15,27 @@
     {% endfor %}
 {% endmacro %}
 
+{% macro render_form_fields_sized(form) %}
+    <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+    {% for field in form %}
+    <div class="control-group{% if field.errors %} error{% endif %}">
+      {{ field.label(class='control-label') }}
+      <div class="controls">
+	  {% if field.name == "codes_content" %}
+        {{ field(rows='15')|safe }}
+        {% else %}
+        {{ field()|safe }}
+        {% endif %}
+         {% if field.errors %}
+          {% for error in field.errors %}
+            <span class="error help-inline">{{ error|safe }}</span>
+          {% endfor %}
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+{% endmacro %}
+
 {% macro form_tag(legend) %}
     <form method="POST" class="form-horizontal">
       <fieldset>
@@ -40,6 +61,13 @@
 {% macro render_form(form, return_url, btn='Save', legend='') %}
     {% call form_tag(legend) %}
         {{ render_form_fields(form) }}
+        {{ render_form_buttons(return_url, btn) }}
+    {% endcall %}
+{% endmacro %}
+
+{% macro render_form_sized(form, return_url, btn='Save', legend='') %}
+    {% call form_tag(legend) %}
+        {{ render_form_fields_sized(form) }}
         {{ render_form_buttons(return_url, btn) }}
     {% endcall %}
 {% endmacro %}

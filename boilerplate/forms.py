@@ -129,8 +129,8 @@ class ScriptEditForm(BaseForm):
 
 class LivePythonConsoleForm(BaseForm):
     
-    codes_name = fields.TextField(_('Code Name'), [validators.Required(), validators.Length(max=255)])
-    codes_content = fields.TextAreaField(_('Code Content'), [validators.Required(), validators.Length(max=65536)])
+    codes_name = fields.TextField(_('Name of Script'), [validators.Required(), validators.Length(max=255)])
+    codes_content = fields.TextAreaField(_('Python Code'), [validators.Required(), validators.Length(max=65536)])
     save_to_datastore = fields.BooleanField(_('Save to datastore'))
     show_source = fields.BooleanField(_('Show source code when run by public'))
     html_output = fields.BooleanField(_('HTML console output'))

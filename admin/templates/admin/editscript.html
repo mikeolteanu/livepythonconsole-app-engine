@@ -6,7 +6,7 @@
 
 {% block content %}
 
-<BR><b>Script Name: {{ script.codes_name }}</b>
+<BR><b>Script Name: {{ script.codes_name }}</b><br>
 
-  {{ lib.render_form(form, uri_for('script_manage'), btn='Update') }}
+  {{ lib.render_form_sized(form, uri_for('script_manage'), btn='Update') }}
 {% endblock %}
