@@ -159,7 +159,6 @@ class PublicPythonScriptRun(BaseHandler):
             pass
         self.abort(404)
         
-    @user_required
     def get(self, url):
         script = self.get_or_404(url)
         console_output = execwrapper(str(script.codes_content))
