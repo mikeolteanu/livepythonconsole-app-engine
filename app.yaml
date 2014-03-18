@@ -1,4 +1,4 @@
-application: YOUR_APP_ID_REPLACES_THIS_TEXT
+application: admnonlytest
 version: dev
 runtime: python27
 api_version: 1
@@ -88,6 +88,8 @@ handlers:
 libraries:
 - name: jinja2
   version: "2.6"
+- name: numpy
+  version: "1.6.1"
 - name: webapp2
   version: "2.5.2"
 - name: markupsafe
